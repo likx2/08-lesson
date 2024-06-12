@@ -32,6 +32,19 @@ body {
     '950': '#141452',
 */
 
+/* Variables */
+:root {
+    --color-primary: #3030fb;
+    --color-secondary: #505eff;
+    --color-blue-50: #ecf2ff;
+    --color-blue-100: #dce7ff;
+    --color-blue-200: #c0d2ff;
+    --color-blue-300: #99b2ff;
+    --color-blue-400: #7187ff;
+    --color-blue-700: #2320d3;
+    --color-white-solid: white;
+}
+
 /* Sections styles */
 
 /* Navigation */
@@ -42,7 +55,7 @@ body {
     width: 100%;
     padding: 0 1.5rem;
     min-height: 4rem;
-    background-color: #505eff;
+    background-color: var(--color-primary);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,7 +68,7 @@ body {
     display: flex;
     gap: 1rem;
     justify-content: center;
-    color: white;
+    color: var(--color-white-solid);
 }
 
 .nav-link {
@@ -128,12 +141,73 @@ body {
 }
 
 .service-item {
-    color: #3030fb;
+    color: var( --color-primary);
 }
 
 .services-subtitle {
     margin-bottom: 5px;
     font-size: 1.2rem;
+}
+
+
+/* Contact form */
+.contact-form {
+    width: 50%;
+    border: 2px solid;
+    border-color: var(--color-blue-700);
+    border-radius: 8px;
+    padding: 16px;
+
+    & > * + * {
+        margin-top: 10px;
+    }
+
+    @media screen and (max-width: 600px) {
+        width: 100%;
+    }
+}
+
+.contact-form-label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--color-white-solid);
+    margin-bottom: 4px;
+}
+
+.contact-form-input, .contact-form-textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 0;
+    outline: 2px solid transparent;
+    border: 2px solid;
+    border-color: var(--color-blue-700);
+
+    &:focus-visible {
+        outline-color: var(--color-blue-200);
+    }
+}
+
+.contact-form-textarea {
+    resize: none;
+}
+
+.contact-form-submit-btn {
+    padding: 8px 20px;
+    color: var(--color-white-solid);
+    background-color: var(--color-primary);
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.85rem;
+    margin-top: 20px;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+        background-color: var(--color-blue-400);
+    }
 }
 
 /* Reusable */
@@ -150,14 +224,14 @@ body {
     padding: 1rem;
     border-radius: 8px;
     font-weight: 500;
-    color: white;
+    color: var(--color-white-solid);
 }
 
 .cta-primary {
-    background-color: #3030fb;
+    background-color: var(--color-primary);
     transition: background-color 0.1s ease-in-out;
     &:hover {
-        background-color: #505eff;
+        background-color: var(--color-secondary);
     }
 }
 

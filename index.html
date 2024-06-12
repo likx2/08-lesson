@@ -163,38 +163,47 @@
           </article>
         </div>
       </section>
-      <section class="section" aria-label="contact" id="contact">
+      <section id="contact" class="section" aria-label="contact" >
         <h2 class="section-title">Get in touch</h2>
         <form
+          class="contact-form"
           action="https://formsubmit.co/konopajew86@gmail.com"
           method="POST"
         >
-          <label for="name">Name</label>
-          <input
-            id="name"
-            name="Name"
-            placeholder="ex. Alex"
-            required
-            minlength="2"
-          />
-          <label for="email">Email</label>
-          <input
-            id="email"
-            name="Email"
-            placeholder="alex@gmail.com"
-            required
-            pattern="test"
-          />
-          <label for="message">Message</label>
-          <textarea
-            id="message"
-            name="message"
-            placeholder="Enter your message"
-            minlength="10"
-            maxlength="200"
-            required
-          ></textarea>
-          <button type="submit">Send</button>
+          <div>
+            <label for="name" class="contact-form-label">Name</label>
+            <input
+              id="name"
+              class="contact-form-input"
+              name="Name"
+              placeholder="ex. Alex"
+              required
+              minlength="2"
+            />
+          </div>
+          <div>
+            <label for="email" class="contact-form-label">Email</label>
+            <input
+              id="email"
+              class="contact-form-input"
+              name="Email"
+              placeholder="alex@gmail.com"
+              required
+            />
+          </div>
+          <div>
+            <label for="message" class="contact-form-label">Message</label>
+            <textarea
+              id="message"
+              class="contact-form-textarea"
+              name="Message"
+              placeholder="Enter your message"
+              minlength="10"
+              maxlength="200"
+              required
+            ></textarea>
+          </div>
+          <button class="contact-form-submit-btn" type="submit">Send</button>
         </form>
       </section>
     </main>
