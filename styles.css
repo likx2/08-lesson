@@ -1,0 +1,171 @@
+/* Reset styles */
+* {
+    box-sizing: border-box;
+}
+
+body, p, h1, h2, h3 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: 'Poppins', 'sans-serif';
+    font-weight: 400;
+}
+
+/* Palette */
+/* 
+    '50': '#ecf2ff',
+    '100': '#dce7ff',
+    '200': '#c0d2ff',
+    '300': '#99b2ff',
+    '400': '#7187ff',
+    '500': '#505eff',
+    '600': '#3030fb',
+    '700': '#2320d3',
+    '800': '#2020b3',
+    '900': '#23258c',
+    '950': '#141452',
+*/
+
+/* Sections styles */
+
+/* Navigation */
+.nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 0 1.5rem;
+    min-height: 4rem;
+    background-color: #505eff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    color: white;
+}
+
+.nav-link {
+    transition: font-weight 0.1s ease-in-out;
+
+    &:hover {
+         font-weight: 600;
+    }
+}
+
+/* Hero section */
+.hero {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.hero-title {
+    font-size: 3rem;
+}
+
+.hero-img-container {
+   max-width: 500px;
+
+   @media screen and (max-width: 700px) {
+    display: none;  
+  }
+}
+
+.hero-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+.hero-cta {
+    margin-top: 1rem;
+}
+
+/* About */
+
+.about-wrapper {
+    display: flex;
+    gap: 20px;
+}
+
+/* Added an img container to make an image fit only its width, not stretch the whole height as a flex-item */
+.about-img-container {
+    flex: 1;
+}
+
+.about-img {
+    @media screen and (max-width: 700px) {
+        display: none;  
+    }
+}
+
+/* Services */
+
+.services-wrapper {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+
+    @media screen and (max-width: 700px) {
+        /* Changed display: block; to flex-direction: column; after practical class as keeping display flex keeps a gap between items (display: block removes it) */
+        flex-direction: column;
+    }
+}
+
+.service-item {
+    color: #3030fb;
+}
+
+.services-subtitle {
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+/* Reusable */
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 5rem 16px 16px;
+}
+
+/* Call to action */
+.cta {
+    display: inline-block;
+    padding: 1rem;
+    border-radius: 8px;
+    font-weight: 500;
+    color: white;
+}
+
+.cta-primary {
+    background-color: #3030fb;
+    transition: background-color 0.1s ease-in-out;
+    &:hover {
+        background-color: #505eff;
+    }
+}
+
+.section {
+    padding: 20px 0;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
